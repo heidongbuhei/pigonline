@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>母猪生产</title>
+    <link href="../build/css/pig_information.css" rel="stylesheet" type="text/css">
+    <link href="../build/css/sow_production.css" rel="stylesheet" type="text/css">
+    <link href="../vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <div class="container-fluid">
+        <!--表头-->
+        <div class="row">
+            <div class="page-title">
+                <div class="page-name">
+                    母猪生产
+                </div>
+                <div class="page-report">
+                    <small>记录数：<span>&nbsp; 170 &nbsp;</span>发情：8
+                        &nbsp;配种：168&nbsp;返情：0&nbsp;空怀：0&nbsp;流产：0
+                        &nbsp;分娩：1&nbsp;断奶：0&nbsp;
+                    </small>
+                </div>
+                <div class="page-help-download">
+                    <!--<div class="col-xs-6">-->
+                    <div class="help-doc">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <a href="##">使用帮助</a>
+                    </div>
+                    <!--</div>-->
+                    <!--<div class="col-xs-6">-->
+                    <div class="download">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <a href="##">下载报表</a>
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--表头end-->
+
+        <!--筛选条件-->
+        <div class="row" style="background: rgb(248,246,247)">
+            <!--筛选部分-->
+            <div class="col-xs-12 brief-inquiry">
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName2">类型：</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>发情</option>
+                            <option>配种</option>
+                            <option>妊娠</option>
+                            <option>分娩</option>
+                            <option>断奶</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>状态：</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>有效</option>
+                            <option>未检测</option>
+                            <option>无效</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>起始时间：</label>
+                        <input type="date" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>截止时间：</label>
+                        <input type="date" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="耳号" style="width: 130px">
+                    </div>
+                    <button class="form-btn">查询</button>
+                    <a class="detailed-inquiry-btn" href="##">详细查询</a>
+                    <i class="fa fa-angle-double-right" aria-hidden="true" style="color: rgb(53,152,219)"></i>
+                </form>
+
+            </div>
+            <!--筛选部分end-->
+
+            <!--详细查询-->
+            <div class="col-xs-12 detailed-inquiry">
+                <div class="form-inline">
+                    <div class="form-group queryconditon">
+                        <label>首配公猪耳号</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="耳号">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>次配公猪耳号</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="耳号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>配种舍号</label>
+                        <input type="hidden" class="form-control" placeholder="Jane Doe">
+                        <a href="##">无</a>
+                    </div>
+                    <div class="form-group">
+                        <label>妊检舍号</label>
+                        <input type="hidden" class="form-control" placeholder="Jane Doe">
+                        <a href="##">无</a>
+                    </div>
+                    <div class="form-group">
+                        <label>分娩舍号</label>
+                        <input type="hidden" class="form-control" placeholder="Jane Doe">
+                        <a href="##">无</a>
+                    </div>
+                    <div class="form-group">
+                        <label>断奶舍号</label>
+                        <input type="hidden" class="form-control" placeholder="Jane Doe">
+                        <a href="##">无</a>
+                    </div>
+
+
+                    <div class="form-group queryconditon">
+                        <label>配种方式</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>人工授精</option>
+                            <option>本交</option>
+                        </select>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="copulateTimeS">配种开始时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="copulateTimeS" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="inTimeE">配种结束时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="inTimeE" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="checkTimeS">妊检开始时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="checkTimeS" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="checkTimeE">妊检结束时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="checkTimeE" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="brithTimeS">分娩开始时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="brithTimeS" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="brithTimeE">分娩结束时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="brithTimeE" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="weanTimeS">断奶开始时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="weanTimeS" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label for="weanTimeE">断奶结束时间</label>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="weanTimeE" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>配种人</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>三4</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>妊检人</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>1</option>
+                            <option>大白</option>
+                            <option>二元</option>
+                            <option>三元</option>
+                            <option>土猪</option>
+                            <option>大长</option>
+                            <option>杜洛克</option>
+                            <option>皮杜</option>
+                        </select>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>接生员</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>长白</option>
+                            <option>大白</option>
+                            <option>二元</option>
+                            <option>三元</option>
+                            <option>土猪</option>
+                            <option>大长</option>
+                            <option>杜洛克</option>
+                            <option>皮杜</option>
+                        </select>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>品种</label>
+                        <select class="form-control">
+                            <option selected="selected">产房饲养员</option>
+                            <option>长白</option>
+                            <option>大白</option>
+                            <option>二元</option>
+                            <option>三元</option>
+                            <option>土猪</option>
+                            <option>大长</option>
+                            <option>杜洛克</option>
+                            <option>皮杜</option>
+                        </select>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>检查结果</label>
+                        <select class="form-control">
+                            <option selected="selected">不限</option>
+                            <option>返情</option>
+                            <option>空怀</option>
+                            <option>流产</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group queryconditon">
+                        <label>总断奶数从</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="头数">
+                        </div>
+                    </div>
+                    <div class="form-group queryconditon">
+                        <label>到</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="头数">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--详细查询end-->
+
+        </div>
+        <!--筛选条件end-->
+
+        <!--数据容器-->
+        <div class="row">
+            <div class="data-operation">
+                <button class="creat-faqing-btn">登记发情</button>
+                <button class="creat-peizhong-btn">登记配种</button>
+                <button class="creat-renjian-btn">登记妊检</button>
+                <button class="creat-fenmian-btn">登记分娩</button>
+                <button class="creat-duannai-btn">登记断奶</button>
+                <button class="sjjc-btn">数据检查</button>
+                <div class="data-operation-pageinupt">
+                    每页显示条数：
+                    <input type="text" placeholder="&nbsp;20" style="width: 30px; height: 28px;border-radius: 5px;outline: none; border: 1px solid #cccccc;">
+                    <div style="float: right;margin: 0 20px">
+                        <i class="fa fa-cog table-title-btn" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="table-box">
+                <table class="table table-striped tabtable">
+                    <thead>
+                    <tr style="background: rgb(248,248,248)">
+                        <th>耳号</th>
+                        <th>定位</th>
+                        <th>记录类型</th>
+                        <th>记录时间</th>
+                        <th>记录已发生天数</th>
+                        <th>超期天数</th>
+                        <th>
+                            <input type="hidden"  value="-5">
+                            <input type="checkbox" class="allCheck"/> 全选
+                            <input type="button" value="一键配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody style="border:1px solid #cccccc;" class="table1-main table1-main-page1" id="table1">
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr><tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">1</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody style="border:1px solid #cccccc;display: none" class="table1-main table1-main-page2">
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">2</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody style="border:1px solid #cccccc;display: none;" class="table1-main table1-main-page3">
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a style="cursor:pointer">3</a></td>
+                        <td>育肥舍</td>
+                        <td>后备</td>
+                        <td>2017-10-17</td>
+                        <td>407</td>
+                        <td>177</td>
+                        <td>
+                            <input type="checkbox">
+                            <input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pageination"></div>
+        </div>
+        <!--数据容器end-->
+    </div>
+</div>
+<script src="../vendors/JQuery/jquery-2.1.4.min.js"></script>
+<script src="../build/js/pig_information.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.creat-faqing-btn,.creat-peizhong-btn,.creat-renjian-btn,.creat-fenmian-btn,.creat-duannai-btn{
+    background: white;
+    border: 1px solid rgb(53,152,219);
+    color: rgb(53,152,219);
+    border-radius: 16px;
+    padding: 5px 8px;
+    margin-right: 5px;
+    transition: color 0.6s;
+}
+.creat-faqing-btn:hover,.creat-peizhong-btn:hover,.creat-renjian-btn:hover,.creat-fenmian-btn:hover,.creat-duannai-btn:hover{
+    color: black;
+}
+.sjjc-btn{
+    border: none;
+    background: rgb(255,226,182);
+    padding: 2px 5px;
+    color: black;
+    border-radius: 7px;
+}

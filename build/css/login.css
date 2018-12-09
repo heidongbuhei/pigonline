@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    background: #f4f9fd;
+    font-family: 新宋体;
+}
+.container-fluid{
+    background-color:rgb(53,152,219);
+    height: 340px;
+}
+/*波浪样式*/
+.wave1{
+    background: url("../../images/wave1.png") repeat-x;
+    height: 87px;
+    width: 400%;
+    position: absolute;
+    top:257px ;
+    left: -230px;
+    z-index:2;
+}
+.wave2{
+    background: url("../../images/wave2.png") repeat-x;
+    height: 87px;
+    width: 400%;
+    position: absolute;
+    top:257px ;
+    left: 0px;
+    z-index:1;
+}
+.wave3{
+    background:#f4f9fd;
+    height: 50px;
+    width: 400%;
+    position: absolute;
+    top:319px ;
+    left: 0px;
+    z-index:3;
+
+}
+/*主体*/
+.container-center{
+    position: relative;
+    top:40px;
+    z-index: 4;
+    background: rgba(0,0,0,0);
+    margin: 0 auto;
+    width: 350px;
+    height:536px ;
+    text-align: center;
+}
+/*banner*/
+.container-center img{
+    background: rgb(53,152,219);
+    width: 120px;
+}
+.container-center h3{
+    background: rgb(53,152,219);
+    color: white;
+}
+/*输入框*/
+.input-group{
+    width: 350px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    background: white;
+}
+.input-group1{
+    background: white;
+    font-size: 15px;
+    line-height: 40px;
+}
+.input-group1 i img{
+    width:25px;
+    margin-top: -12px;
+    background: white;
+}
+.input-group1 span{
+    color:rgb(53,152,219);
+    background: white;
+}
+.username,.passworder{
+    border: none;
+    outline: none;
+    font-size: 19px;
+    background: white;
+}
+.remember,.reg{
+    display: inline-block;
+}
+.reg a{
+    text-decoration: none;
+    color:rgb(53,152,219);
+}
+/*按钮*/
+.btn button{
+    width: 160px;
+    height:45px ;
+    border-radius: 22px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    border: none;
+    outline: none;
+}
+.btn button:nth-child(1){
+
+    background: rgb(53,152,219);
+}
+.btn button:nth-child(2){
+    background: rgb(91,192,190);
+}
+.btn button:hover{
+    color: black;
+}
+

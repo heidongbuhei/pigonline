@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="../build/css/login.css" type="text/css">
+    <link rel="stylesheet" href="../vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <!--水波纹-->
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+    <div class="wave3"></div>
+    <!--主体盒子-->
+    <div class="container-center">
+        <img src="../images/loginlogo.png">
+        <h3>猪场管家</h3>
+        <br><br><br><br><br>
+        <!--输入框-->
+        <div class="input-group">
+                <span class="input-group1">
+                    <i><img src="../images/icon_jth.png"></i>
+                    <span>集团号：</span>
+                </span>
+            <input type="text" class="username">
+        </div><br>
+        <div class="input-group">
+                <span class="input-group1">
+                    <i><img src="../images/icon_wzc.png"></i>
+                    <span>猪&nbsp;场：</span>
+                </span>
+            <input type="text" class="passworder">
+        </div><br>
+        <div class="input-group">
+                <span class="input-group1">
+                    <i><img src="../images/icon_user.png"></i>
+                    <span>姓&nbsp;名：</span>
+                </span>
+            <input type="text" class="username">
+        </div><br>
+        <div class="input-group">
+                <span class="input-group1">
+                    <i><img src="../images/icon_password.png"></i>
+                    <span>密&nbsp;码：</span>
+                </span>
+            <input type="text" class="username">
+        </div><br>
+        <!--记住密码等-->
+        <div class="remember">
+            <label><input type="checkbox" checked="checked" id="remember">记住密码</label>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+
+        <br>
+        <div class="reg">
+            <a href="#"><h4 style="display: inline-block">新用户注册</h4></a>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><h4 style="display: inline-block;color: black">忘记密码</h4></a>
+        </div>
+        <!--按钮-->
+        <div class="btn">
+            <button>登录</button>
+            <button onclick="window.location.href='phone_login.html'">切换手机登录</button>
+        </div>
+    </div>
+</div>
+<script src="../vendors/JQuery/jquery-2.1.4.min.js"></script>
+<script>
+    let waveloop1 = () => {
+        $(".wave1").css({ "left": "0px" }).animate({ "left": "-1233px" }, 20000, 'linear', waveloop1);
+    }
+    let waveloop2 = () => {
+        $(".wave2").css({ "left": "50px" }).animate({ "left": "-1009px" }, 30000, 'linear', waveloop2);
+    }
+    waveloop1();
+    waveloop2();
+    // $(document).ready(function () {
+    //    function wavelop1() {
+    //        $(".wave1").css({"left":"0px"}).animate({"left":"-1233px"},2000,'liner',wavelop1);
+    //    }
+    //     function wavelop2() {
+    //         $(".wave2").css({"left":"0px"}).animate({"left":"-1009px"},3000,'liner',wavelop2);
+    //     }
+    //     waveloop1();
+    //     waveloop2();
+    // });
+</script>
+</body>
+</html>

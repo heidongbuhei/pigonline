@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+/*表头*/
+.page-title{
+    height: 40px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid rgb(41,128,185);
+}
+.page-name,.page-report{
+    float: left;
+    height: 40px;
+}
+.page-name{
+    background:rgb(41,128,185);
+    width: 180px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+.page-report small span{
+    color: red;
+}
+.page-report small{
+    line-height: 5;
+    margin-left: 20px;
+}
+.page-help-download{
+    float: right;
+    height: 40px;
+}
+.help-doc,.download{
+    display: inline-block;
+    margin-top: 19px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.help-doc i{
+    color: red;
+}
+.help-doc a,.download a{
+    text-decoration: none;
+    color: rgb(41,128,185);
+}
+.download i{
+    color: rgb(41,128,185);
+}
+/*表头end*/
+/*筛选部分*/
+.brief-inquiry{
+    width: 100%;
+    padding: 12px;
+    background: rgb(248,246,247);
+}
+.form-btn,.creat-file-btn,.creat-smallpig-file-btn{
+    color: white;
+    background:rgb(53,152,219);
+    border: none;
+    border-radius: 16px;
+    padding: 5px 8px;
+    margin-right: 5px;
+    transition: color 0.6s;
+}
+.form-btn:hover,.creat-file-btn:hover,.creat-smallpig-file-btn:hover{
+    color: black;
+}
+/*筛选部分end*/
+.form-group{
+    margin-right: 10px;
+}
+/*详细查询*/
+.detailed-inquiry{
+    padding:12px 0;
+    border-top: 1px solid white;
+    display: none;
+}
+.queryconditon{
+    margin: 5px;
+}
+
+/*详细查询end*/
+/*数据容器*/
+.data-operation{
+    margin: 15px 0;
+}
+.table-title-btn{
+    color:rgb(53,152,219);
+    font-size: 25px!important;
+}
+.data-operation-pageinupt{
+    float: right;
+}
+.table-box{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height:500px ;
+}
+.table1-main-page1 td{
+    border: 1px solid #cccccc;
+}
+/*数据容器end*/
