@@ -163,7 +163,7 @@ $(document).ready(function () {
     //动态渲染页面
     function uploadPage() {
         $.ajax({
-            url:pagrUrl,
+            url:"https://heidongbuhei.github.io/test/pages/"+pagrUrl,
             type:"get",
             data:{},
             async:true,
@@ -187,7 +187,7 @@ $(document).ready(function () {
 
     function uploadLocalPage() {
         $.ajax({
-            url:"http://heidongbuhei.gitee.io/pigonline/pages/home_page.html",
+            url:"https://heidongbuhei.github.io/test/pages/home_page.html",
             type:"get",
             data:{},
             async:true,
