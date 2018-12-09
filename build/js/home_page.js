@@ -187,7 +187,7 @@ $(document).ready(function () {
 
     function uploadLocalPage() {
         $.ajax({
-            url:"https://heidongbuhei.github.io/test/pages/home_page.html",
+            url:"https://heidongbuhei.github.io/test/pages/home-page-part.html",
             type:"get",
             data:{},
             async:true,
@@ -200,8 +200,7 @@ $(document).ready(function () {
             },
             success:function (data) {
                 console.log(data);
-                var localPage=$(data).find(".home-page-part");
-                $(".change-part").html(localPage);
+                $(".change-part").html(data);
 
             },
             error:function (data) {
