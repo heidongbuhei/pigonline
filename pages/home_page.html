@@ -517,7 +517,15 @@
                                      </li>
                                      <li class="title" style="width:250px;">
                                          <a>每页显示条数：</a>
-                                         <input type="text" placeholder="6" style="width: 30px;height:28px;border-radius: 5px;outline:none;border:1px solid #cccccc">&nbsp;&nbsp;
+                                         <select class="custom-select" id="pageSizeSelector" style="width: 60px;height:28px;border-radius: 5px;outline:none;border:1px solid #cccccc">
+                                             <option value="5">5</option>
+                                             <option value="10" selected>10</option>
+                                             <option value="20">20</option>
+                                             <option value="40">40</option>
+                                             <option value="80">80</option>
+                                             <option value="100">100</option>
+                                         </select>
+                                         <!--<input type="text" placeholder="6" style="width: 30px;height:28px;border-radius: 5px;outline:none;border:1px solid #cccccc">&nbsp;&nbsp;-->
                                          <input type="button" value="确定" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">
                                  </ul>
                              </div>
@@ -541,253 +549,58 @@
                                              </th>
                                          </tr>
                                          </thead>
-                                         <tbody style="border:1px solid #cccccc;" class="table1-main table1-main-page1" id="table1">
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">1</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--</tbody>-->
-                                         <!--<tbody style="border:1px solid #cccccc;display: none" class="table1-main table1-main-page2">-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">2</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--</tbody>-->
-                                         <!--<tbody style="border:1px solid #cccccc;display: none;" class="table1-main table1-main-page3">-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
-                                         <!--<tr>-->
-                                         <!--<td><a style="cursor:pointer">3</a></td>-->
-                                         <!--<td>育肥舍</td>-->
-                                         <!--<td>后备</td>-->
-                                         <!--<td>2017-10-17</td>-->
-                                         <!--<td>407</td>-->
-                                         <!--<td>177</td>-->
-                                         <!--<td>-->
-                                         <!--<input type="checkbox">-->
-                                         <!--<input type="button" value="登记配种" style="border-radius: 5px;background:#ffe2b6;border:none;outline: none;padding:1px 3px">-->
-                                         <!--</td>-->
-                                         <!--</tr>-->
+                                         <tbody style="border:1px solid #cccccc;" class="table1-main table1-main-page1" id="pigTableBody">
+
                                          </tbody>
                                      </table>
                                  </div>
-                                 <!--分页-->
-                                 <div class="pages">
-                                     <nav aria-label="Page navigation">
-                                         <!--<ul class="pagination">-->
-                                         <!--<li>-->
-                                         <!--<a href="#" aria-label="Previous" class="up-page">-->
-                                         <!--<span aria-hidden="true">&laquo;</span>-->
-                                         <!--</a>-->
-                                         <!--</li>-->
-                                         <!--<li><a href="#" class="page-1 page-number" style="background: rgb(41,128,189);color: white">1</a></li>-->
-                                         <!--&lt;!&ndash;<li><a href="#" class="page-2">2</a></li>&ndash;&gt;-->
-                                         <!--&lt;!&ndash;<li><a href="#" class="page-3">3</a></li>&ndash;&gt;-->
-                                         <!--<li>-->
-                                         <!--<a href="#" aria-label="Next" class="next-page">-->
-                                         <!--<span aria-hidden="true">&raquo;</span>-->
-                                         <!--</a>-->
-                                         <!--</li>-->
-                                         <!--<span style="font-size: 15px;line-height: 40px">&nbsp;&nbsp;共：<span id="allpage-number"></span>页</span>-->
-                                         <!--</ul>-->
-
-                                     </nav>
+                                 <div class="row" style="height: 40px;background:rgb(255,226,182);margin: 0 3px ">
+                                     <div class="col-9">
+                                         <nav aria-label="Page navigation example">
+                                             <ul class="pagination">
+                                                 <!--<li class="page-item">-->
+                                                 <!--<a class="page-link" href="#" aria-label="Previous">-->
+                                                 <!--<span aria-hidden="true">&laquo;</span>-->
+                                                 <!--<span class="sr-only">Prergvious</span>-->
+                                                 <!--</a>-->
+                                                 <!--</li>-->
+                                                 <!--<li class="page-item"><a class="page-link" href="#">1</a></li>-->
+                                                 <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+                                                 <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+                                                 <!--<li class="page-item">-->
+                                                 <!--<a class="page-link" href="#" aria-label="Next">-->
+                                                 <!--<span aria-hidden="true">&raquo;</span>-->
+                                                 <!--<span class="sr-only">Next</span>-->
+                                                 <!--</a>-->
+                                                 <!--</li>-->
+                                             </ul>
+                                         </nav>
+                                     </div>
 
                                  </div>
+                                 <!--分页-->
+                                 <!--<div class="pages">-->
+                                     <!--<nav aria-label="Page navigation">-->
+                                         <!--&lt;!&ndash;<ul class="pagination">&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<a href="#" aria-label="Previous" class="up-page">&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<span aria-hidden="true">&laquo;</span>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<li><a href="#" class="page-1 page-number" style="background: rgb(41,128,189);color: white">1</a></li>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#" class="page-2">2</a></li>&ndash;&gt;&ndash;&gt;-->
+                                         <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#" class="page-3">3</a></li>&ndash;&gt;&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<a href="#" aria-label="Next" class="next-page">&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<span aria-hidden="true">&raquo;</span>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;<span style="font-size: 15px;line-height: 40px">&nbsp;&nbsp;共：<span id="allpage-number"></span>页</span>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+                                     <!--</nav>-->
+
+                                 <!--</div>-->
                              </div>
                              <!--待妊娠-->
                              <div class="title1-1 title1-1-drs">
